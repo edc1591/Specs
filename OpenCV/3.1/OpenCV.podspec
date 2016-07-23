@@ -10,7 +10,7 @@ This is a podspec that builds OpenCV 3.1 as a dynamic library. This is useful wh
     s.homepage         = 'https://github.com/edc1591/opencv'
     s.license          = { :type => '3-clause BSD', :file => 'LICENSE' }
     s.author           = { 'Evan Coleman' => 'e@edc.me' }
-    s.source           = { :git => 'https://github.com/edc1591/opencv.git', :commit => '799faddbc6c82e623458a3fafebcd9bf368589cb' }
+    s.source           = { :git => 'https://github.com/edc1591/opencv.git', :commit => '787a3faf4691e34f7aff15b55b5831e6d1ef5a8d' }
 
     s.ios.deployment_target = '8.4'
     s.preserve_paths = [ "ios/libopencv2.dylib", "ios/libjpeg.dylib", "ios/libpng.dylib", "ios/libzlib.dylib", "ios/include" ]
