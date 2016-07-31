@@ -21,8 +21,16 @@ OpenCV: open source computer vision library
     s.source_files = [ "build/sources/build/**/*{.h,.hpp,.c,.cpp,.inc,.mm}", "build/sources/modules/**/src/**/*{.h,.hpp,.c,.cpp,.inc,.mm}", "modules/**/include/**/*{.h,.hpp}", "build/opencv2/*{.h,.hpp}", "build/*{.h,.hpp}" ]
     s.public_header_files = [ "build/install/include/**/*{.h,.hpp}" ]
     s.preserve_paths = [ "build", "3rdparty/libjpeg", "3rdparty/libpng" ]
-    # s.header_dir = "opencv2"
-    s.xcconfig = { 
+    s.header_dir = "opencv2"
+    s.header_mappings_dir = "build/install/include"
+    s.module_name = "OpenCV"
+    # s.xcconfig = { 
+    #    'HEADER_SEARCH_PATHS' => '"$(inherited)" "${PODS_ROOT}/OpenCV/build/install/include/**" "${PODS_ROOT}/OpenCV/build/modules/**"',
+    #    'GCC_PREPROCESSOR_DEFINITIONS' => '__OPENCV_BUILD=1',
+    #    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+    #    'WARNING_CFLAGS' => '"$(inherited)" "-Wno-deprecated-register" "-Wno-deprecated-declarations" "-Wno-implicit-function-declaration" "-Wno-unused-variable"'
+    # }
+    s.pod_target_xcconfig = { 
        'HEADER_SEARCH_PATHS' => '"$(inherited)" "${PODS_ROOT}/OpenCV/build/install/include/**" "${PODS_ROOT}/OpenCV/build/modules/**"',
        'GCC_PREPROCESSOR_DEFINITIONS' => '__OPENCV_BUILD=1',
        'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
